@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://use.typekit.net/wmb2par.css">
+
+</head>
+<body>
+        <!-- Nav -->
+        <nav id="nav" class="nav drop-shadow-nav bilo-regular">
+            <div class="top-nav">
+                <a class="logo active" href="index.html">
+                    <img id="logo-img" src="assets/logo.svg" alt="The logo is the words 'Sandy Adsett'">
+                </a>
+                <ul class="nav-links">
+                    <li class="nav-link"><a href="about.html">About</a></li>
+                    <li class="nav-link"><a href="gallery.html">Gallery</a></li>
+                    <li class="nav-link"><a href="contact.html">Contact Us</a></li>
+                    <li class="nav-link"><a href="assets/DM200_S2_M1_ConstanceAhlefeldtLaurvig.pdf" target="blank">Showcase</a></li>
+                </ul>
+                <!-- hamburger menu -->
+                <div id="hamburger" class="hamburger-menu" onclick="openMenu()">
+                    <div class="hamburger-lines"></div>
+                    <div class="hamburger-lines"></div>
+                    <div class="hamburger-lines"></div>
+                </div>
+            </div>
+            <!-- hamburger menu dropdown -->
+            <div id="nav-menu">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="assets/DM200_S2_M1_ConstanceAhlefeldtLaurvig.pdf" target="blank">Showcase</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- This is a full screen hero slider (it switches to partial height on small screens)
+        the images move automatically and can be moves using the pagination markers - this is handled by carousel.js -->
+        <div class="hero-slider">
+            <div class="slide">
+                <img src="assets/car_1.avif" alt="Woman standiong in front of large zig zag artwork">
+            </div>
+            <div class="slide">
+                <img src="assets/car_2.jpg" alt="Person standing infront of three artworks">
+            </div>
+            <div class="slide">
+                <img src="assets/car_3.jpg" alt="Gallery Exhibition with lots of people">
+            </div>
+            <div class="slide">
+                <img src="assets/car_4.jpg" alt="Sandy Adsett stadging infront of black and white artwork">
+            </div>
+            <!-- There are the markers that display what page is active -->
+            <div class="pagination"></div>
+        </div>
+
+        <!-- Section with a blurb about the artist and an image. This section is linked to the about page -->
+        <section>
+            <!-- Grid container -->
+            <div class="about_home_container">
+                <!-- text -->
+                <div class="text-column bilo-regular">
+                    <div class="large-screen-about-home">
+                        <h2 class ="">Sandy Adsett</h2>
+                        <p>Across six decades, Sandy Adsett has explored M&amacr;ori symbology and given new voice to customary approaches to M&amacr;ori art. The primary element in much of his work is the koru &#40;unfurling fern frond&#41;, and he often references flora and fauna, within a paradigm of interconnectedness.</p>
+                        <p>“Sandy Adsett.” Auckland Art Gallery, www.aucklandartgallery.com/explore-art-and-ideas/artist/2200/sandy-adsett. Accessed 12 Nov. 2023.</p>
+                        <a href="about.html" class="transparent-button bilo-regular">Learn More</a>
+                    </div>
+                </div>
+                <!-- Image -->
+                <div class="image-column">
+                    <a href="about.html">
+                    <img src="assets/land_page_1.jpg" alt="Sandy Adsett standing infront of multiple red artworks">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- This section displays an image with an overlay and a title that links to the gallery page -->
+        <section>
+            <a href="gallery.html">
+                <div id="view-gallery" role="img" aria-label="Person standing in a gallery presenting">
+                    <div class="bilo-black" id="view-gallery-text">
+                        <h1>View Gallery</h1>
+                    </div>
+                </div>
+            </a>  
+        </section>
+
+        <!-- the footer. Also includes the toggle switch that changes the site between light and dark mode -->
+        <footer id="footer" class="footer footer-landing-page bilo-light">
+            <div class="footer-container">
+                <p>Sandy Adsett</p>
+                <p>This website was made for educational purposes only. Designed and built by, Constance Ahlefeldt-Laurvig, 2023</p>
+            </div>
+
+            <div class="toggle-switch">
+                <input type="checkbox" id="toggle">
+                <label for="toggle"></label>
+                <span class="toggle-label">Light Mode</span>
+            </div>
+        </footer>
+
+    <!-- Scripts that handle nav and darkmode, and the script that handes the carousel-->
+    <script src="nav.js"></script>  
+    <script src="carousel.js"></script>
+    <script src="dark-mode.js"></script>
+    
+</body>
+</html>

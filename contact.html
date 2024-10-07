@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://use.typekit.net/wmb2par.css">
+
+</head>
+<body class="contact-page-body">
+    
+    <!-- Nav -->
+    <nav id="nav" class="nav contact-us-nav bilo-regular">
+        <div class="top-nav">
+            <a class="logo" href="index.html">
+                <img id="logo-img" src="assets/logo.svg" alt="The logo is the words 'Sandy Adsett'">
+            </a>
+            <ul class="nav-links">
+                <li class="nav-link"><a href="about.html">About</a></li>
+                <li class="nav-link"><a href="gallery.html">Gallery</a></li>
+                <li class="nav-link active"><a href="contact.html">Contact Us</a></li>
+                <li class="nav-link"><a href="assets/DM200_S2_M1_ConstanceAhlefeldtLaurvig.pdf" target="blank">Showcase</a></li>
+            </ul>
+            <!-- Hamburger menu -->
+            <div id="hamburger"  class="hamburger-menu" onclick="openMenu()">
+                <div class="hamburger-lines"></div>
+                <div class="hamburger-lines"></div>
+                <div class="hamburger-lines"></div>
+            </div>
+        </div>
+        <!-- Dropdown menu version, opens when hamburger menu is pressed --> 
+        <div id="nav-menu">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li class="active"><a href="contact.html">Contact Us</a></li>
+                <li><a href="assets/DM200_S2_M1_ConstanceAhlefeldtLaurvig.pdf" target="blank">Showcase</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Section with image and contact form. Uses css grids to control the placement on screen + responsiveness -->
+    <section class="contact-section">
+        <div class="contact-grid">
+            <!-- this is the first column. Includes an image and a title. -->
+            <div class="contact-image-container">
+                <div>
+                    <h1 class="contact-title bilo-light">Contact</h1>
+                    <img class="contact-image" src="assets/contact_square.jpg" alt="Woman standing in front of 2 works by Sandy Adsett"> 
+                </div>
+            </div>
+            
+            <!-- The contact div. the form does not trigger any actual contact functionalities but can be modified to do so -->
+            <div class="contact-form bilo-light">
+                <!-- This is a header that appears when the user attempts to press submit without having pressed al the boxes -->
+                <div id="failed-requirements">
+                    <h1>
+                        Please fill in all the boxes.
+                    </h1>
+                </div>
+                <!-- This is the form. The input boxes have validation attached so the user is forces to fill them all out to successfully submit -->
+                <!-- If a user presses on a box and leaves it without filling it, the box styling changes and the label gets an extra comment.
+                     This is removed when the box is filled in -->
+                <form id="contactForm">
+                    <!-- the first and last name are in the same div so that they can be on one line on large screens and 2 lines on smaller screens -->
+                    <div class="input-name">
+                        <!-- input box and label for First name -->
+                        <div class="names-input-width">
+                            <label id="firstname-label" for="firstname">First name:</label><br>
+                            <input class="bilo-light form-input" type="text" id="firstname" name="firstname" >
+                        </div>
+                        <!-- input box and lable for last name.  -->
+                        <div class="names-input-width">
+                            <label id="lastname-label" for="lastname">Last name:</label><br>
+                            <input class="bilo-light form-input" type="text" id="lastname" name="lastname" >
+                        </div>
+                    </div>
+                    
+                    <div class="input-boxes">
+                        <!-- input box and label for the email -->
+                        <!-- The email input also has email validation and switches between 2 error messages depending on if the input is empty or wrong -->
+                        <label id="emailaddress-label" for="emailaddress">Email Address:</label>
+                        <input class="bilo-light form-input" type="email" id="emailaddress" name="emailaddress">
+                        
+                        <!-- input box and label for the subject -->
+                        <label id="subject-label" for="subject">Subject:</label>
+                        <input class="bilo-light form-input" type="text" id="subject" name="subject">
+                        
+                        <!-- The message input is a text area to allow for more user input -->
+                        <label id="message-label" class="bilo-light" for="message">Message:</label>
+                        <textarea class="bilo-light form-input" id="message" name="message" rows="5" cols="33"></textarea>
+                        
+                        <!-- The functionality that triggers on submit is handled in submit-modal.js -->
+                        <input class="submit-button bilo-regular" type="submit" value="Submit">
+                    </div>
+                                    
+                  </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- the footer. includes the toggle that switches the website between light and dark mode -->
+    <footer id="footer" class="footer footer-contact-page bilo-light">
+        <div class="footer-container">
+            <p>Sandy Adsett</p>
+            <p>This website was made for educational purposes only. Designed and built by, Constance Ahlefeldt-Laurvig, 2023</p>
+        </div>
+        
+        <div class="toggle-switch">
+            <input type="checkbox" id="toggle">
+            <label for="toggle"></label>
+            <span class="toggle-label">Light Mode</span>
+        </div>
+    </footer>
+
+    <!-- The submit modal. this pops up when the user successfully submits the form. -->
+    <div id="submit-modal" class="modal">
+        <div class="modal-content bilo-light">
+            <h2>Thank you for your interest. We will get back to you as soon as possible!</h2>
+        </div>
+    </div>
+
+    <!-- The script that handles the modal, darkmode and the navigation hamburger menu dropdown -->
+    <script src="submit-modal.js"></script>
+    <script src="dark-mode.js"></script>
+    <script src="nav.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gallery</title>
+
+        <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="https://use.typekit.net/wmb2par.css">
+        
+    </head>
+    <body>
+        <!-- Nav -->
+            <nav id="nav" class="nav bilo-regular nav-default-colour">
+            <div class="top-nav">
+                <a class="logo" href="index.html">
+                    <img id="logo-img" src="assets/logo.svg"  alt="The logo is the words 'Sandy Adsett'">
+                </a>
+                <ul class="nav-links">
+                    <li class="nav-link"><a href="about.html">About</a></li>
+                    <li class="nav-link active"><a href="gallery.html">Gallery</a></li>
+                    <li class="nav-link"><a href="contact.html">Contact Us</a></li>
+                    <li class="nav-link"><a href="assets/DM200_S2_M1_ConstanceAhlefeldtLaurvig.pdf" target="blank">Showcase</a></li>
+                </ul>
+                <!-- Hamburger menu. only visible on small screens -->
+                <div id="hamburger"  class="hamburger-menu" onclick="openMenu()">
+                    <div class="hamburger-lines"></div>
+                    <div class="hamburger-lines"></div>
+                    <div class="hamburger-lines"></div>
+                </div>
+            </div>
+            <!-- the hamburger menu dropdown -->
+            <div id="nav-menu">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li class="active"><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="assets/DM200_S2_M1_ConstanceAhlefeldtLaurvig.pdf" target="blank">Showcase</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- This section contains the gallery header and background image -->
+        <section>
+            <div id="gallery-background" role="img" aria-label="Woman standing infront of green artwork">
+                <div class="bilo-black" id="gallery-text">
+                    <h1>Gallery</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- This div contains all the gallery images. they are handled in the masonry.js file.
+        the images will load in 3 columns on large screens, 2 columns on medium screens and 1 column on small screens.
+        the lightbox functionality is integrated into the masonry file so it is always present when the grid is reloaded.
+        the images load in the columns left to right -->
+        <div class="gallery">
+            <div class="imagegrid"></div>
+        </div>
+
+        <!-- this is the image lightbox. the src and alt txt are filled out via the masonry js file.
+        there are next and previous arrows to move between the images.
+        the previous arrow is hidden on the first image and the next arrow is hidden on the last image.
+        if there is an issue fetching an image, the lightbox with still load but the src will be blank. -->
+        <div class="lightbox">
+            <img class="lightbox-image" src="assets/gallery_1.jpg" alt="Default image">
+            <span class="prev">&#10094;</span>
+            <span class="next">&#10095;</span>
+        </div>
+
+
+        <!-- The footer. includes the toggle that switches the website between light and dark mode using the dark-mode.js file. -->
+        <footer id="footer" class="footer bilo-light">
+            <div class="footer-container">
+                <p>Sandy Adsett</p>
+                <p>This website was made for educational purposes only. Designed and built by, Constance Ahlefeldt-Laurvig, 2023</p>
+            </div>
+
+            <div class="toggle-switch">
+                <input type="checkbox" id="toggle">
+                <label for="toggle"></label>
+                <span class="toggle-label">Light Mode</span>
+            </div>
+        </footer>
+
+        <!-- The scripts that handle the image grid and lightbox (masonry.js), darn mode and the hamburger nav bar menu  -->
+        <script src="masonry.js"></script>
+        <script src="dark-mode.js"></script>
+        <script src="nav.js"></script>
+
+    </body>
+</html>

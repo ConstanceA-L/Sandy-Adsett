@@ -1,0 +1,839 @@
+/* General page styling */
+
+body,html{
+    height:100%;
+    margin:0%;
+} 
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Dark mode */
+/* The following classes handles dark mode */
+.dark-mode{
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+.modal-darkmode .modal-content{
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+.dark-mode a{
+    color: #fff !important; 
+}
+
+.dark-mode .hamburger-lines{
+    background-color: #ffffff;
+}
+
+.dark-mode input, .dark-mode textarea{
+    border: 1px solid white !important;
+    color: white;
+}
+
+.dark-mode .transparent-button{
+    border: 2px solid white;
+}
+
+/* Gallery-specific darkmode changes */
+.gallery-darkmode{
+    box-shadow: inset 0 0 0 1000px rgba(0, 0,0,0.6) !important;
+}
+
+.gallery-text-darkmode{
+    color: white !important;
+}
+
+
+
+
+/* Navigation  */
+
+/* this is the nav colour on the contact page */
+.contact-us-nav{
+    background-color: #D8D8D8;
+}
+
+/* the drop shadow for the nav bar */
+.drop-shadow-nav{
+    filter: drop-shadow(0 0 0.25rem black);
+    background-color: white;
+}
+
+/* the default nav bar colour */
+.nav-default-colour{
+    background-color: white;
+}
+
+/* default navbar settings */
+.nav{
+    min-height: 75px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:1;
+}
+
+/* alignment of the logo, links and hamburger menu in nav */
+.top-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+
+/* these classes handle the nav links */
+.nav-link{
+    margin-left:10px;
+    margin-right: 20px;
+    display:inline;
+    list-style-type: none;
+}
+
+.nav-link a, #nav-menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links{
+    display:block;
+}
+
+
+/* these classes handle the dropdown nave menu */
+#nav-menu ul{
+    list-style-type: none;
+}
+
+#nav-menu ul li{
+    padding: 10px;
+}
+
+#nav-menu{
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* hamburger menu */
+.hamburger-menu{
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-lines{
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    margin: 6px 20px 6px 0;
+}
+
+
+
+
+
+/* Logo colour/placement */
+.logo{
+    padding:10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 40px;
+    width: 100%
+}
+
+
+
+
+
+/* Landing Page */
+
+/* these classes handle the image slider */
+.hero-slider{
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.slide{
+    display:none;
+    height: 100vh;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* this is the pagination markers in the carousel */
+.pagination{
+    position: absolute;
+    bottom: 40px;
+    right: 0px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+
+/* these classes handle the about section on the index page */
+.about_home_container{
+    display: grid;
+    margin:40px 10px;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+}
+
+.text-column, .image-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px;
+    align-items: center;
+}
+
+.text-column{
+    grid-column: 1;
+}
+
+.image-column{
+    grid-column: 2;
+}
+
+.image-column img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.transparent-button{
+    border: 2px solid black;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+
+/* these classes handle the view gallery section on the index page */
+#view-gallery{
+    width:100%;
+    height:400px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-image: url('assets/view_gallery.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.4);
+    justify-content: center;
+}
+
+#view-gallery-text{
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+
+
+
+/* Gallery Page */
+
+/* the gallery  */
+#gallery-background{
+    max-width:100%;
+    height:400px;
+    display: flex;
+    margin-top: 75px;
+    background-image: url('assets/gallery_background.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(255,255,255,0.9);
+    align-items: center;
+}
+
+
+/* the gallery title text */
+#gallery-text{
+    color: Black;
+    text-decoration: none;
+    font-size: 6em;
+    margin-left: 50px;
+}
+
+#gallery-text h1{
+    margin:0;
+}
+
+/* these classes hangle the gallery image grid*/
+.gallery{
+    justify-content: center;
+    display: flex;
+}
+
+.imagegrid{
+    position: relative;
+    max-width: 1000px;
+    display: flex;
+    gap: 10px;
+    padding: 100px 5vw 0 5vw;
+}
+.image-gallery-column{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.gallery-image{
+    position: relative;
+    overflow: hidden;
+    width:100%;
+}
+
+.gallery-image img{
+    width: 100%;
+    height: 100%;
+}
+
+/* this is the image overlay. the pointer event ensure the user can still click on the image behind*/
+.overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background:#000000;
+    color: white;
+    display: flex;
+    align-items: end;
+    justify-content: flex-start;
+    opacity:0;
+    transition:0.5s;
+    pointer-events: none;
+}
+.overlay h2{
+    margin-left:15px;
+}
+
+/* this adds the overlay on hover  */
+.gallery-image:hover .overlay {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+/* Gallery Lightbox */
+.lightbox{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-image{
+    max-width: 80%;
+    max-height:80%;    
+}
+
+/* this are the next and previous buttons*/
+.lightbox .prev, .lightbox .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    font-size: 30px;
+    color: #ffffff;
+    user-select: none;
+}
+
+.lightbox .prev{
+    left: 20px;
+}
+
+.lightbox .next{
+    right: 20px;
+}
+
+/* About page */
+#about-grid-title{
+    font-size: clamp(50px, 15vw, 170px);
+    margin: 0;
+}
+
+/* these classes handle the grid and the image/text items in the grid */
+.about-grid{
+    margin-top:150px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+    padding: 0 50px;
+    grid-gap: 50px 20px;
+}
+
+.about-grid-section{
+    display:flex;
+    justify-content: center;
+} 
+
+.about-grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-grid-item p{
+    font-size: 16px;
+}
+
+.about-grid-item img{
+    max-width:100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+/* Contact us page */
+.contact-page-body{
+    background-color: #D8D8D8;
+}
+
+/* the modal that pops up when submit is pressed and validation is successful */
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top:75px;
+    left: 0;
+    width:100%;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content{
+    background-color: #d8d8d8;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.contact-section{
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+/* the grid that contains the form and the image */
+.contact-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    max-width: 1000px;
+    padding: 0 60px;
+    width: 100%
+}
+
+/* the image container and image */
+.contact-image-container{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-image{
+    max-height: 400px;
+    height: 100%;
+    /* aspect-ratio: 1/1; */
+    object-fit: cover;
+}
+
+/* this handles the placement of the firsname/lastname input boxes */
+.input-name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form input, textarea{
+    border: 1px solid black;
+    background-color: transparent;
+    padding: 15px;
+    margin: 10px 10px 10px 0px;
+}
+
+/* form styling */
+.contact-form{
+    margin: 0 40px 0 0px;
+    width: 100%;
+}
+
+/* the styling for the submit button */
+.submit-button{
+    border: 1px solid black;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+/* the styling for the input boxes */
+.input-boxes{
+    width: 100%;
+}
+
+.names-input-width{
+    width: 45%;
+}
+
+input, textarea, .submit-button{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* this class is added when the input is invalid */
+.empty-requirement{
+    border: 1px solid red !important;
+}
+
+/* this handles the visibility of the failed requirements header */
+#failed-requirements{
+    display: none;
+}
+
+
+/* media queries*/
+
+
+
+@media (max-width: 960px){
+
+    /* change height of image on contact page */
+    .contact-image{
+        max-height: 300px;
+    }
+
+    /* change the layout of the form on the contact page */
+    .input-name{
+        display: block;
+    }
+    .names-input-width{
+        width: 100%;
+    }
+    .contact-form input, textarea{
+        padding: 10px;
+    }
+    .contact-grid{
+        margin-top: 75px;
+    }
+
+    /* change the font size on the index page */
+    .about-grid-item p{
+        font-size: 14px;
+    }
+}
+
+/* largeest screen size */
+@media (min-width: 1400px){
+    /* changes the grid layout on the index page about section */
+    .about_home_container{
+        grid-template-columns: 2fr 1fr;
+    }
+
+    /* sets a max width on the text div in the about section on the home screen */
+    .large-screen-about-home{
+        max-width: 800px;
+    }
+}
+
+
+/* tablet width */
+@media (max-width: 768px){
+
+    /* hides the nav links and dispays the hamburger menu */
+    .nav-links{
+        display: none !important;
+    }
+    .hamburger-menu{
+        display: block !important;
+    }
+
+    /* update the about grid on the index page */
+    .about_home_container{
+        grid-template-columns: 1fr;
+    }
+    .image-column{
+        display: none !important;
+    }
+
+    /* handles the layout of the contact form */
+    .contact-grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin-top: 0;
+    }
+    .contact-section{
+        margin-top: 100px;
+        height: auto;
+    }
+    .contact-image{
+        max-height: 500px;
+    }
+    .contact-form{
+        max-width: 500px;
+        margin: 40px 0;
+    }
+
+    /* Handles the gird on the about page */
+    .about-grid{
+        grid-template-columns: 1fr;   
+        margin-top: 100px;
+    }
+
+    /* changes the order of clumn 3 and 4 in the about grid */
+    .about-grid-item:nth-child(3){
+        order: 1;
+    }
+    .about-grid-item:nth-child(4){
+        order: 0;
+    }
+
+    /* changing the image size in the about grid */
+    .about-grid-item img{
+        object-fit: cover;
+        object-position: top;
+        max-height: 400px;
+    }
+
+}
+
+/* phone size */
+@media screen and (max-width: 576px) {
+
+    /* index page about home styling */
+    .about_home_container{
+        margin: 0 10px;
+        min-height: 400px;
+    }
+
+    /* limits the height of the index page hero slider and sets the position of the pagination markers */
+    .hero-slider{
+        height: 60vh;
+    }
+
+    .pagination{
+        top: 55%;
+    }
+
+    /* changing the gallery header and text size*/
+    #gallery-text{
+        font-size: 3em;
+        margin-left: 0;
+    }
+    #gallery-background{
+        height: 200px;
+        justify-content: center;
+    }
+
+    /* gallery image grid padding */
+    .imagegrid{
+        padding: 50px 10vw;
+    }
+    .contact-image{
+        width: 100%;
+        overflow:hidden;
+    }
+
+    /* contact form styling */
+    .contact-image-container{
+        display: block;
+        margin: 0px 40px;
+    }
+
+    .contact-title{
+        text-align: center;
+    }
+
+    .contact-form{
+        width: 80%;
+    }
+
+    /* about page grid responsiveness */
+    .about-grid-item img{
+        object-fit: cover;
+        object-position: top;
+        max-height: 400px;
+    }
+    #about-grid-title{
+        text-align: center;
+        font-size: clamp(50px, 25vw, 170px);
+    }
+    .about-grid{
+        margin-top: 75px;
+    }
+}
+
+
+/* Fonts */
+.bilo-light{
+    font-family: "bilo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bilo-bold{
+    font-family: "bilo", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.bilo-regular{
+    font-family: bilo, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.bilo-black{
+    font-family: bilo, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+/* footer */
+.footer{
+    margin: 40px 0 0 0;
+    min-height: 100px;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgb(0 0 0 / 50%) 0px -6px 6px -6px;
+    position: relative;
+}
+
+/* the contact page footer is a different colour */
+.footer-contact-page{
+    background-color: #d8d8d8;
+}
+
+/* margin on the index page */
+.footer-landing-page{
+    margin: 0;
+}
+
+.footer p{
+    margin: 10px;
+}
+
+.footer-container{
+    max-width: 85%;
+}
+
+/* this is the toggle switch that handles light and dark mode */
+.toggle-switch {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.toggle-switch input[type="checkbox"] {
+    appearance: none;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-switch input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    top: 50%;
+    left:2px;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.toggle-switch input[type="checkbox"]:checked {
+    background-color: #191919; /* Change to dark color */
+    }
+
+
+.toggle-switch input[type="checkbox"]:checked::before {
+    transform: translateY(-50%) translateX(20px);
+    background-color: #ccc; /* Change to light color */
+}
+
+/* this is the label under the toggle switch */
+.toggle-label {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+    

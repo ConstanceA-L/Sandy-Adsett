@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://use.typekit.net/wmb2par.css">
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav id="nav" class="nav drop-shadow-nav bilo-regular">
+        <div class="top-nav">
+            <a class="logo" href="index.html">
+                <img id="logo-img" src="assets/logo.svg"  alt="The logo is the words 'Sandy Adsett'">
+            </a>
+            <ul class="nav-links">
+                <li class="nav-link active"><a href="about.html">About</a></li>
+                <li class="nav-link"><a href="gallery.html">Gallery</a></li>
+                <li class="nav-link "><a href="contact.html">Contact Us</a></li>
+                <li class="nav-link"><a href="assets/DM200_S2_M1_ConstanceAhlefeldtLaurvig.pdf" target="blank">Showcase</a></li>
+            </ul>
+            <!-- hamburger menu. only visible on small screens -->
+            <div id="hamburger" class="hamburger-menu" onclick="openMenu()">
+                <div class="hamburger-lines"></div>
+                <div class="hamburger-lines"></div>
+                <div class="hamburger-lines"></div>
+            </div>
+        </div>
+        <!-- Dropdown menu version, opens when hamburger menu is pressed -->
+        <div id="nav-menu">
+            <ul>
+                <li class="active"><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="assets/DM200_S2_M1_ConstanceAhlefeldtLaurvig.pdf" target="blank">Showcase</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Section with info about the artist. This section uses css grids to display as 2rows and 2columns on large pages and 1 column with 4 rows on smaller pages -->
+    <section class="about-grid-section">
+        <div class="about-grid bilo-regular">
+            <div class="about-grid-item">
+                <h1 id="about-grid-title" class="bilo-black">About</h1>
+                <p>Dr Sandy Adsett MNZM is a revered New Zealand artist and painter with experience in carving, weaving, costume and stage design. His immense career in Māori visual arts and education has seen him train many of Aotearoa&#39;s celebrated Māori artists, while his influence and artwork can be found across Aotearoa in meeting houses, churches, art museums, government and corporate venues and private collections.</p>
+                <p>In the 1960&#39;s, he became an arts specialist for the Department of Education&#39;s Advisory Service, helping introduce the new Māori Arts in Schools program. In 1993, he was appointed principal tutor at Tairawhiti Polytechnic in Gisborne, formatting a wananga &#40;place of learning&#41; arts direction for Toihoukura School of Māori Visual Arts.</p>
+            </div>
+            <!-- Image -->
+            <div class="about-grid-item">
+                <img src="assets/right_about.jpg" alt="Image of Sandy Adsett stading infront of a colour artwork, cropped to show right half only">
+            </div>
+            <!-- the following 2 grid items change order on small screen when all grid items are in a column, to avoid having 2 pictures after each other -->
+            <div class="about-grid-item">
+                <img src="assets/left_about.jpg" alt="Image of Sandy Adsett stading infront of a colour artwork, cropped to show left half only"> 
+            </div>
+            <div class="about-grid-item">
+                <p>He returned to his Ngāti Kahungunu roots in 2002, setting up the Toimairangi School of Māori Visual Culture within Te Wananga o Aotearoa, in Hastings. He is a member of Te Atinga &#40;Committee of Contemporary Māori Visual Arts&#41; of Toi Māori Aotearoa and is on the Te Waka Toi board of Creative New Zealand.</p>
+                <p>His work has featured in many major art exhibitions, including Headlands &#40;1992&#41; in Sydney, Australia; Te Waka Toi: Contemporary Māori Art &#40;1992-94&#41;, which toured the United States, and Kiwa-Pacific Connections &#40;2003&#41; in Vancouver, Canada. In 2005, Sandy received the Order of New Zealand for Service to Art, and Te Wananga o Aotearoa cited him as adjunct professor for his contribution to art education and the Māori community.</p>
+                <p>Fitzgerald, Anna . “Sandy Adsett.” Arts Foundation, 3 Feb. 2022, www.thearts.co.nz/artists/sandy-adsett.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- The footer. Includes a toggle switch that switches the website between light and dark mode  -->
+    <footer id="footer" class="footer bilo-light">
+        <div class="footer-container">
+            <p>Sandy Adsett</p>
+            <p>This website was made for educational purposes only. Designed and built by, Constance Ahlefeldt-Laurvig, 2023</p>
+        </div>
+
+        <!-- This switch uses the dark-mode js to function. -->
+        <div class="toggle-switch">
+            <input type="checkbox" id="toggle">
+            <label for="toggle"></label>
+            <span class="toggle-label">Light Mode</span>
+        </div>
+    </footer>
+
+    <!-- Script for the dark mode functionality and the hamburger menu dropdown -->
+    <script src="dark-mode.js"></script>
+    <script src="nav.js"></script>
+
+</body>
+</html>
